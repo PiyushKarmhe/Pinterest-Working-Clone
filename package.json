@@ -1,0 +1,35 @@
+{
+  "name": "pinterest-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.js",
+  "scripts": {
+    "start": "cd server && node index.js",
+    "client": "cd client && npm start",
+    "server": "cd server && nodemon index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint .",
+    "heroku-postbuild": "cd client && npm install --production --no-shrinkwrap && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "mongoose-unique-validator": "^3.0.0",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.3.0",
+    "nodemon": "^2.0.14",
+    "prettier": "2.4.1"
+  }
+}
